@@ -20,32 +20,32 @@ const category_item = StyleSheet.create({
    title:{
        fontSize:18,
        fontWeight:'bold',
-       color:'#41a47a',
+       color:'#ef6c00',
        textAlign:'left',
    },
 });
 
 const meal_item = StyleSheet.create({
     container:{
-        
-        backgroundColor:'#e4e4e4',
+        flex:1,
         margin:10,
-        padding:25,
+        padding:30,
         borderColor:'#41a47a',
-        borderWidth:1,
-        borderRadius:10,
+        borderBottomWidth:2,
     },
 
     image:{
-        height: device_size.height/4,
-        borderRadius:100,
-        marginBottom:15,
+        height: device_size.height/3,
+        borderRadius:50,
+        marginBottom:20,
+        borderColor:'#41a47a',
+        borderWidth:2,
     },
 
     title:{
         fontSize:20,
         fontWeight:'bold',
-        color:'#41a47a',
+        color:'#ef6c00',
         textAlign:'center',
     },
 
