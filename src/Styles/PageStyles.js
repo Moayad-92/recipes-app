@@ -16,7 +16,7 @@ const meal_details = StyleSheet.create({
     },
     image:{
         height:device_size.height/3,
-        borderRadius:50,
+        borderRadius:10,
         marginVertical:15,
         borderColor:'#41a47a',
         borderWidth:2,
@@ -33,7 +33,7 @@ const meal_details = StyleSheet.create({
         color:'#ef6c00'
     },
     instructions_container:{
-        margin:10,
+        marginVertical:10,
         padding:10,
         backgroundColor:'#e4e4e4',
         borderRadius:10,

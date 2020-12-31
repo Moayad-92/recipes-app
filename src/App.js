@@ -8,7 +8,7 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{headerTintColor:'#ef6c00'}}>
         <Stack.Screen name='Categories' component={CategoriesList}/>
         <Stack.Screen name='Meals' component={MealsList}/>
         <Stack.Screen name='Meal Details' component={MealDetails}/>
