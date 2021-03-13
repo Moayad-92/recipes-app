@@ -2,7 +2,7 @@ import {StyleSheet, Dimensions} from 'react-native';
 
 const device_size = Dimensions.get('window');
 
-const category_item = StyleSheet.create({
+export const category_item = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#e4e4e4',
@@ -24,5 +24,3 @@ const category_item = StyleSheet.create({
     textAlign: 'left',
   },
 });
-
-export {category_item};

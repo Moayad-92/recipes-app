@@ -5,7 +5,7 @@ import {MealItem} from '../Meals/components/MealItem';
 
 const api_url = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
 
-function MealsList({route, navigation}) {
+export function MealsList({route, navigation}) {
   const {categoryName} = route.params;
   const [meals, setMeals] = useState([]);
 
@@ -36,5 +36,3 @@ function MealsList({route, navigation}) {
     </SafeAreaView>
   );
 }
-
-export {MealsList};

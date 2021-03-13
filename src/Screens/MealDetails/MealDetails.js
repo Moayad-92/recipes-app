@@ -13,7 +13,7 @@ import {meal_details} from './styles';
 
 const api_url = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
 
-function MealDetails({route}) {
+export function MealDetails({route}) {
   const {mealId} = route.params;
   const [mealDetails, setMealDetails] = useState([]);
 
@@ -57,5 +57,3 @@ function MealDetails({route}) {
     </SafeAreaView>
   );
 }
-
-export {MealDetails};

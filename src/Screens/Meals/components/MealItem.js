@@ -2,7 +2,7 @@ import React from 'react';
 import {TouchableOpacity, Image, Text} from 'react-native';
 import {meal_item} from './styles';
 
-function MealItem({meal, onSelect}) {
+export function MealItem({meal, onSelect}) {
   return (
     <TouchableOpacity style={meal_item.container} onPress={onSelect}>
       <Image
@@ -14,5 +14,3 @@ function MealItem({meal, onSelect}) {
     </TouchableOpacity>
   );
 }
-
-export {MealItem};

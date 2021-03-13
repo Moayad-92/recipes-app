@@ -2,7 +2,7 @@ import {StyleSheet, Dimensions} from 'react-native';
 
 const device_size = Dimensions.get('window');
 
-const meal_details = StyleSheet.create({
+export const meal_details = StyleSheet.create({
   container: {
     flex: 1,
     margin: 10,
@@ -67,5 +67,3 @@ const meal_details = StyleSheet.create({
     textAlign: 'center',
   },
 });
-
-export {meal_details};

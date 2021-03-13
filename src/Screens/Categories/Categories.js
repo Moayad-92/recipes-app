@@ -5,7 +5,7 @@ import {CategoryItem} from '../Categories/components/CategoryItem';
 
 const api_url = 'https://www.themealdb.com/api/json/v1/1/categories.php';
 
-function CategoriesList({navigation}) {
+export function CategoriesList({navigation}) {
   const [categories, setCategories] = useState([]);
 
   async function getCategories() {
@@ -36,5 +36,3 @@ function CategoriesList({navigation}) {
     </SafeAreaView>
   );
 }
-
-export {CategoriesList};
