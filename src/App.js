@@ -34,7 +34,11 @@ function App() {
 
 function HomeStack() {
   return (
-    <Stack.Navigator screenOptions={{headerTintColor: '#ef6c00'}}>
+    <Stack.Navigator
+      screenOptions={{
+        headerTintColor: '#ef6c00',
+        headerBackTitle: 'Back',
+      }}>
       <Stack.Screen name="Categories" component={CategoriesList} />
       <Stack.Screen name="Meals" component={MealsList} />
       <Stack.Screen name="Meal Details" component={MealDetails} />

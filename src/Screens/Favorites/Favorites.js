@@ -1,10 +1,11 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {SafeAreaView} from 'react-native';
+import {EmptyList} from './components/EmptyList';
 
-export function Favorites() {
+export function Favorites({navigation}) {
   return (
-    <SafeAreaView>
-      <Text>Favorites Page</Text>
+    <SafeAreaView style={{flex: 1}}>
+      <EmptyList onPress={() => navigation.goBack()} />
     </SafeAreaView>
   );
 }
