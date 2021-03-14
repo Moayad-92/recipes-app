@@ -15,15 +15,15 @@ function App() {
         screenOptions={({route}) => ({
           tabBarIcon: ({color}) =>
             route.name === 'Home' ? (
-              <Icon name="menu" size={40} color={color} />
+              <Icon name="menu" size={30} color={color} />
             ) : (
-              <Icon name="heart" size={40} color={color} />
+              <Icon name="heart" size={30} color={color} />
             ),
         })}
         tabBarOptions={{
           activeTintColor: '#ef6c00',
           inactiveTintColor: 'lightgray',
-          showLabel: false,
+          labelStyle: {fontSize: 14, fontWeight: 'bold', marginTop: -5},
         }}>
         <Tab.Screen name="Home" component={HomeStack} />
         <Tab.Screen name="Favorites" component={Favorites} />

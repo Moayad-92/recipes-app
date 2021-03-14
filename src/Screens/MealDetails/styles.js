@@ -9,7 +9,8 @@ export const meal_details = StyleSheet.create({
     paddingHorizontal: 10,
   },
   title: {
-    fontSize: 24,
+    margin: 15,
+    fontSize: 18,
     fontWeight: 'bold',
     color: '#ef6c00',
     textAlign: 'center',
@@ -17,9 +18,9 @@ export const meal_details = StyleSheet.create({
   image: {
     height: device_size.height / 3,
     borderRadius: 10,
-    marginVertical: 15,
+    marginBottom: 15,
     borderColor: '#41a47a',
-    borderWidth: 2,
+    borderWidth: 1,
   },
   area_container: {
     marginHorizontal: 10,
@@ -38,7 +39,7 @@ export const meal_details = StyleSheet.create({
     backgroundColor: '#e4e4e4',
     borderRadius: 10,
     borderColor: '#41a47a',
-    borderWidth: 2,
+    borderWidth: 1,
   },
   instructions_header: {
     fontSize: 18,

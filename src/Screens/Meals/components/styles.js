@@ -9,21 +9,21 @@ export const meal_item = StyleSheet.create({
     marginHorizontal: 10,
     padding: 15,
     alignItems: 'center',
-    borderColor: '#41a47a',
+    borderColor: '#0001',
     borderBottomWidth: 2,
   },
 
   image: {
     flex: 1,
-    height: device_size.height / 6,
-    borderRadius: 100,
+    height: device_size.height / 8,
+    borderRadius: 1000,
     marginRight: 10,
     borderColor: '#41a47a',
-    borderWidth: 2,
+    borderWidth: 1,
   },
 
   title: {
-    flex: 1.3,
+    flex: 2,
     fontSize: 18,
     fontWeight: 'bold',
     color: '#ef6c00',

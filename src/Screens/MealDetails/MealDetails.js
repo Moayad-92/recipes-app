@@ -28,7 +28,9 @@ export function MealDetails({route}) {
 
   return (
     <SafeAreaView style={{flex: 1}}>
-      <ScrollView style={meal_details.container}>
+      <ScrollView
+        style={meal_details.container}
+        showsVerticalScrollIndicator={false}>
         <Text style={meal_details.title}>* {mealDetails.strMeal} *</Text>
         <Image
           source={{uri: mealDetails.strMealThumb}}
