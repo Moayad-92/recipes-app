@@ -10,6 +10,7 @@ export function CategoryItem({category, onSelect}) {
         source={{uri: category.strCategoryThumb}}
         style={category_item.image}
         resizeMode="center"
+        defaultSource={require('../../../Assets/placeholder.png')}
       />
     </TouchableOpacity>
   );

@@ -9,6 +9,7 @@ export function MealItem({meal, onSelect}) {
         source={{uri: meal.strMealThumb}}
         style={meal_item.image}
         resizeMode="center"
+        defaultSource={require('../../../Assets/placeholder.png')}
       />
       <Text style={meal_item.title}>{meal.strMeal}</Text>
     </TouchableOpacity>

@@ -35,6 +35,7 @@ export function MealDetails({route}) {
         <Image
           source={{uri: mealDetails.strMealThumb}}
           style={meal_details.image}
+          defaultSource={require('../../Assets/placeholder1.png')}
         />
         <View style={meal_details.area_container}>
           <Text style={meal_details.area_text}>
