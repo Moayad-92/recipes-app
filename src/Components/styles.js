@@ -16,3 +16,10 @@ export const custom_button = StyleSheet.create({
     textAlign: 'center',
   },
 });
+export const loading = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
