@@ -1,4 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
+import colors from '../../Assets/colors';
 
 const device_size = Dimensions.get('window');
 
@@ -8,18 +9,23 @@ export const meal_details = StyleSheet.create({
     margin: 10,
     paddingHorizontal: 10,
   },
-  title: {
+  title_container: {
     margin: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  title: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#ef6c00',
-    textAlign: 'center',
+    color: colors.primary,
+    marginRight: 10,
   },
   image: {
     height: device_size.height / 3,
     borderRadius: 10,
     marginBottom: 15,
-    borderColor: '#41a47a',
+    borderColor: colors.border,
     borderWidth: 1,
   },
   area_container: {
@@ -31,14 +37,14 @@ export const meal_details = StyleSheet.create({
   area_text: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#ef6c00',
+    color: colors.primary,
   },
   instructions_container: {
     marginVertical: 10,
     padding: 10,
-    backgroundColor: '#e4e4e4',
+    backgroundColor: colors.gray,
     borderRadius: 10,
-    borderColor: '#41a47a',
+    borderColor: colors.border,
     borderWidth: 1,
   },
   instructions_header: {
@@ -54,7 +60,7 @@ export const meal_details = StyleSheet.create({
     lineHeight: 20,
   },
   youtube_container: {
-    backgroundColor: '#ef6c00',
+    backgroundColor: colors.primary,
     width: device_size.width / 2,
     alignSelf: 'center',
     margin: 10,

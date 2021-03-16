@@ -1,14 +1,14 @@
 import {StyleSheet, Dimensions} from 'react-native';
-
+import colors from '../../../Assets/colors';
 const device_size = Dimensions.get('window');
 
 export const category_item = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#e4e4e4',
+    backgroundColor: colors.gray,
     margin: 10,
     padding: 10,
-    borderColor: '#41a47a',
+    borderColor: colors.border,
     borderWidth: 1,
     borderRadius: 25,
   },
@@ -20,7 +20,7 @@ export const category_item = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#ef6c00',
+    color: colors.primary,
     textAlign: 'left',
   },
 });

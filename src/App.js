@@ -1,9 +1,10 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import {createStackNavigator, HeaderBackButton} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {CategoriesList, MealsList, MealDetails, Favorites} from './Screens';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {Platform} from 'react-native';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -23,7 +24,12 @@ function App() {
         tabBarOptions={{
           activeTintColor: '#ef6c00',
           inactiveTintColor: 'lightgray',
-          labelStyle: {fontSize: 14, fontWeight: 'bold', marginTop: -5},
+          labelStyle: {
+            fontSize: 14,
+            fontWeight: 'bold',
+            marginTop: -5,
+            marginBottom: Platform.OS === 'android' ? 5 : 0,
+          },
         }}>
         <Tab.Screen name="Home" component={HomeStack} />
         <Tab.Screen name="Favorites" component={Favorites} />

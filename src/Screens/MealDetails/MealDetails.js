@@ -10,10 +10,12 @@ import {
 } from 'react-native';
 import axios from 'axios';
 import {meal_details} from './styles';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import colors from '../../Assets/colors';
 
 const api_url = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
 
-export function MealDetails({route}) {
+export function MealDetails({navigation, route}) {
   const {mealId} = route.params;
   const [mealDetails, setMealDetails] = useState([]);
 
@@ -31,7 +33,10 @@ export function MealDetails({route}) {
       <ScrollView
         style={meal_details.container}
         showsVerticalScrollIndicator={false}>
-        <Text style={meal_details.title}>* {mealDetails.strMeal} *</Text>
+        <View style={meal_details.title_container}>
+          <Text style={meal_details.title}>* {mealDetails.strMeal} *</Text>
+          <Icon name="heart-outline" size={35} color={colors.primary} />
+        </View>
         <Image
           source={{uri: mealDetails.strMealThumb}}
           style={meal_details.image}
