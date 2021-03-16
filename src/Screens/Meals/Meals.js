@@ -1,31 +1,18 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {FlatList, SafeAreaView} from 'react-native';
-import axios from 'axios';
-import { Loading } from '../../Components/Loading';
-import wait from 'waait';
+import {Loading} from '../../Components/Loading';
 import {MealItem} from '../Meals/components/MealItem';
+import {useFetch} from '../../hooks/useFetch';
 
 const api_url = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
 
 export function MealsList({route, navigation}) {
   const {categoryName} = route.params;
-  const [meals, setMeals] = useState([]);
-  const [loading,setLoading]=useState(false);
 
-  async function getMeals() {
-    setLoading(true);
-    await wait(1000);
-    const {data} = await axios.get(api_url + categoryName);
-    setMeals(data.meals);
-    setLoading(false);
-  }
-
-  useEffect(() => {
-    getMeals();
-  }, []);
+  const {data, loading} = useFetch(api_url + categoryName);
 
   if (loading) {
-    return <Loading/>
+    return <Loading />;
   }
 
   const renderMeal = ({item}) => (
@@ -40,7 +27,7 @@ export function MealsList({route, navigation}) {
     <SafeAreaView>
       <FlatList
         keyExtractor={(item) => item.idMeal}
-        data={meals}
+        data={data != null && data.meals}
         renderItem={renderMeal}
       />
     </SafeAreaView>
