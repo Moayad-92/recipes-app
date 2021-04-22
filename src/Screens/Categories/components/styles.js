@@ -11,6 +11,7 @@ export const category_item = StyleSheet.create({
     borderColor: colors.border,
     borderWidth: 1,
     borderRadius: 25,
+    borderStyle: 'dotted',
   },
 
   image: {

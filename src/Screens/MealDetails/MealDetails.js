@@ -32,18 +32,31 @@ export function MealDetails({route}) {
         showsVerticalScrollIndicator={false}>
         <View style={meal_details.title_container}>
           <Text style={meal_details.title}>* {mealDetails.strMeal} *</Text>
-          <Icon name="heart-outline" size={40} color={colors.primary} />
-        </View>
-        <Image
-          source={{uri: mealDetails.strMealThumb}}
-          style={meal_details.image}
-          defaultSource={require('../../Assets/placeholder1.png')}
-        />
-        <View style={meal_details.area_container}>
-          <Text style={meal_details.area_text}>
-            * {mealDetails.strCategory} *
-          </Text>
-          <Text style={meal_details.area_text}>* {mealDetails.strArea} *</Text>
+          <Image
+            source={{uri: mealDetails.strMealThumb}}
+            style={meal_details.image}
+            defaultSource={require('../../Assets/placeholder1.png')}
+          />
+          <View style={meal_details.area_container}>
+            <View style={{alignItems: 'center', flex: 1}}>
+              <Icon
+                name="silverware-fork-knife"
+                size={30}
+                color={colors.primary}
+              />
+              <Text style={meal_details.area_text}>
+                {mealDetails.strCategory}
+              </Text>
+            </View>
+            <View style={{alignItems: 'center', flex: 1}}>
+              <Icon name="heart-outline" size={30} color={colors.primary} />
+              <Text style={meal_details.area_text}>Save </Text>
+            </View>
+            <View style={{alignItems: 'center', flex: 1}}>
+              <Icon name="flag" size={30} color={colors.primary} />
+              <Text style={meal_details.area_text}>{mealDetails.strArea}</Text>
+            </View>
+          </View>
         </View>
         <View style={meal_details.instructions_container}>
           <Text style={meal_details.instructions_header}>Instructions:</Text>
